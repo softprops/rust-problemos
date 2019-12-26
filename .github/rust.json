@@ -11,6 +11,23 @@
                     "column": 4
                 }
             ]
+        },
+        {
+            "owner": "cargo-build",
+            "pattern": [
+                {
+                    "regexp": "^(warning|warn|error)(\\[(\\S*)\\])?: (.*)$",
+                    "severity": 1,
+                    "message": 4,
+                    "code": 3
+                },
+                {
+                    "regexp": "^(\\s-->\\s(\\S+):(\\d+):(\\d+)|.*)$",
+                    "file": 2,
+                    "line": 3,
+                    "column": 4
+                }
+            ]
         }
     ]
 }
