@@ -28,6 +28,17 @@
                     "column": 3
                 }
             ]
+        },
+        {
+            "owner": "cargo-fmt",
+            "pattern": [
+                {
+                    "regexp": "^(Diff in (\\S+)) at line (\\d):",
+                    "message": 1,
+                    "file": 2,
+                    "line": 3
+                }
+            ]
         }
     ]
 }

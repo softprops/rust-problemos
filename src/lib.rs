@@ -1,7 +1,7 @@
 mod util;
 
-fn foo() -> String {
-    1
+fn foo() ->   String {
+    1.to_string()
 }
 
 #[cfg(test)]

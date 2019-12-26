@@ -3,38 +3,42 @@ name: Main
 on: push
 
 jobs:
-  # codestyle:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v2
-  #     - name: Set up Rust
-  #       uses: hecrj/setup-rust-action@v1
-  #       with:
-  #         components: rustfmt
-  #         rust-version: nightly
-  #     - run: cargo fmt --all -- --check
+  codestyle:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Rust
+        uses: hecrj/setup-rust-action@v1
+        with:
+          components: rustfmt
+          rust-version: nightly
+      - name: Install matcher
+        run: echo "::add-matcher::.github/rust.json"
+      - run: cargo fmt --all -- --check
 
-  # lint:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v2
-  #     - name: Set up Rust
-  #       uses: hecrj/setup-rust-action@v1
-  #       with:
-  #         components: clippy
-  #     - run: cargo clippy --all-targets -- -D clippy::all
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Rust
+        uses: hecrj/setup-rust-action@v1
+        with:
+          components: clippy
+      - name: Install matcher
+        run: echo "::add-matcher::.github/rust.json"
+      - run: cargo clippy --all-targets -- -D clippy::all
 
-  # compile:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v2
-  #     - name: Set up Rust
-  #       uses: hecrj/setup-rust-action@v1
-
-  #     - run: cargo check --all
+  compile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Rust
+        uses: hecrj/setup-rust-action@v1
+      - name: Install matcher
+        run: echo "::add-matcher::.github/rust.json"
+      - run: cargo check --all
 
   test:
-    #needs: [codestyle, lint, compile]
     runs-on: ubuntu-latest
 
     steps:
