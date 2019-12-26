@@ -9,6 +9,6 @@ mod tests {
     }
     #[test]
     fn assert_eq_works() {
-        assert_eq!(2 + 2, 5);
+        assert_eq!(2 + 1, 5);
     }
 }
