@@ -37,11 +37,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Checkout
+      uses: actions/checkout@v2
     - name: Setup Rust
       uses: hecrj/setup-rust-action@v1
     - name: Install matcher
       run: echo "::add-matcher::.github/rust.json"
-    - name: Checkout
-      uses: actions/checkout@v2
     - name: Test
       run: cargo test
