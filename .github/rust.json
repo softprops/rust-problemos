@@ -13,10 +13,26 @@
             ]
         },
         {
+            "owner": "cargo-clippy",
+            "pattern": [
+                {
+                    "regexp": "^(warning|warn|error): (.*)$",
+                    "severity": 1,
+                    "message": 2
+                },
+                {
+                    "regexp": "^\\s-->\\s(\\S+):(\\d+):(\\d+)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3
+                }
+            ]
+        },
+        {
             "owner": "cargo-build",
             "pattern": [
                 {
-                    "regexp": "^(warning|warn|error)(\\[(\\S*)\\])?: (.*)$",
+                    "regexp": "^(warning|warn|error)(\\[(\\S*)\\]): (.*)$",
                     "severity": 1,
                     "message": 4,
                     "code": 3
