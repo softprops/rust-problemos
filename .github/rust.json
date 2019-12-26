@@ -4,10 +4,7 @@
             "owner": "cargo-test",
             "pattern": [
                 {
-                    "regexp": "^---- (\\S+) stdout ----$"
-                },
-                {
-                    "regexp": "^thread '\\S+' panicked at '(.+)', (\\S+):(\\d+):(\\d+)$",
+                    "regexp": "^.*panicked\\s+at\\s+'(.*)',\\s+(.*):(\\d+)$",
                     "message": 1,
                     "file": 2,
                     "line": 3,
