@@ -1,6 +1,6 @@
 mod util;
 
-fn foo() ->   String {
+fn foo() -> String {
     1.to_string()
 }
 

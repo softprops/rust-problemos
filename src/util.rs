@@ -1,9 +1,8 @@
-
 #[cfg(test)]
-mod   tests {
+mod tests {
 
     #[test]
-    fn strs_eq  () {
+    fn strs_eq() {
         assert!("hello" != "mom")
     }
 }
