@@ -1,0 +1,20 @@
+{
+    "problemMatcher": [
+        {
+            "owner": "rust",
+            "pattern": [
+                {
+                    "regexp": "^----\\(.+)\\sstdout\\s----$",
+                    "severity": 1,
+                    "message": 4
+                },
+                {
+                    "regexp": "^.*,\\s(\\S+):(\\d+):(\\d)$",
+                    "file": 2,
+                    "line": 3,
+                    "column": 4
+                }
+            ]
+        }
+    ]
+}
