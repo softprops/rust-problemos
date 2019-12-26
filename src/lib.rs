@@ -5,7 +5,7 @@ mod tests {
 
     #[test]
     fn assert_works() {
-        assert!(1 == 2, "it totally did not work")
+        assert!(1 == 2, "it totally did't work")
     }
     #[test]
     fn assert_eq_works() {

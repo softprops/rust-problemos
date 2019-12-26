@@ -4,14 +4,15 @@
             "owner": "rustlang",
             "pattern": [
                 {
-                    "regexp": "^----\\s(.+)\\sstdout\\s----$",
+                    "regexp": "^---- (\\S+) stdout ----$",
                     "message": 1
                 },
                 {
-                    "regexp": "^.*,\\s(\\S+):(\\d+):(\\d)$",
-                    "file": 1,
-                    "line": 2,
-                    "column": 3
+                    "regexp": "^thread '\\S+' panicked at '(.+)', (\\S+):(\\d+):(\\d+)$",
+                    "message": 1,
+                    "file": 2,
+                    "line": 3,
+                    "column": 4
                 }
             ]
         }
