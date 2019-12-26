@@ -5,14 +5,13 @@
             "pattern": [
                 {
                     "regexp": "^----\\s(.+)\\sstdout\\s----$",
-                    "severity": 1,
-                    "message": 4
+                    "message": 1
                 },
                 {
                     "regexp": "^.*,\\s(\\S+):(\\d+):(\\d)$",
-                    "file": 2,
-                    "line": 3,
-                    "column": 4
+                    "file": 1,
+                    "line": 2,
+                    "column": 3
                 }
             ]
         }
