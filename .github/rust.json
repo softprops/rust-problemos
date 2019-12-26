@@ -1,7 +1,7 @@
 {
     "problemMatcher": [
         {
-            "owner": "rustlang",
+            "owner": "cargo-test",
             "pattern": [
                 {
                     "regexp": "^.*panicked\\s+at\\s+'(.*)',\\s+(.*):(\\d+):(\\d+)$",
@@ -13,7 +13,7 @@
             ]
         },
         {
-            "owner": "rustlang",
+            "owner": "cargo-clippy",
             "pattern": [
                 {
                     "regexp": "^(warning|warn|error): (.*)$",
@@ -29,7 +29,7 @@
             ]
         },
         {
-            "owner": "rustlang",
+            "owner": "cargo-build",
             "pattern": [
                 {
                     "regexp": "^(warning|warn|error)(\\[(\\S*)\\]): (.*)$",
@@ -46,7 +46,7 @@
             ]
         },
         {
-            "owner": "rustlang",
+            "owner": "cargo-fmt",
             "pattern": [
                 {
                     "regexp": "^(Diff in (\\S+)) at line (\\d):",
