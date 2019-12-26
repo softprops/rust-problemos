@@ -1,11 +1,10 @@
 {
     "problemMatcher": [
         {
-            "owner": "rustlang",
+            "owner": "cargo-test",
             "pattern": [
                 {
-                    "regexp": "^---- (\\S+) stdout ----$",
-                    "message": 1
+                    "regexp": "^---- (\\S+) stdout ----$"
                 },
                 {
                     "regexp": "^thread '\\S+' panicked at '(.+)', (\\S+):(\\d+):(\\d+)$",
