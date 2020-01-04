@@ -5,10 +5,11 @@ mod tests {
 
     #[test]
     fn assert_works() {
-        assert!(1 == 2, "it totally did not work")
+        assert!(1 == 1, "it totally did't work")
     }
+
     #[test]
     fn assert_eq_works() {
-        assert_eq!(2 + 2, 5);
+        assert_eq!(2 + 2, 4);
     }
 }
